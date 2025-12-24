@@ -8,13 +8,25 @@ namespace WebMvc.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["MetaTitle"] = "Home | Personal Portfolio";
+            ViewData["MetaDescription"] =
+                "Welcome to my personal portfolio showcasing my skills, projects and experience in web development.";
+            ViewData["MetaKeywords"] =
+                "portfolio, web developer, asp.net core, full stack developer";
+
+            return View();
+        }
+        public IActionResult About()
+        {
+            ViewData["MetaTitle"] = "About Me | Personal Portfolio";
+            ViewData["MetaDescription"] =
+                "Know more about me, my journey, skills and experience as a web developer.";
+            ViewData["MetaKeywords"] =
+                "about me, developer profile, asp.net core developer";
+
             return View();
         }
 
-        public IActionResult About()
-        {
-            return View();
-        }
         public IActionResult Project()
         {
             return View();
